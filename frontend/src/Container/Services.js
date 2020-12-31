@@ -11,7 +11,8 @@ export default function Services({services, addService}) {
     }
 
     return (
-        <div>
+        <div className="services">
+            <h3>Available Services</h3>
             {showServices()}
         </div>
     )

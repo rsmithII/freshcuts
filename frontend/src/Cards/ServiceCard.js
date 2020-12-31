@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function ServiceCard({service}) {
-    const {task, description, price} = service
+    const {task} = service
 
     // const handleClick =() => {
     //     if(addFavorite){
@@ -13,10 +13,8 @@ export default function ServiceCard({service}) {
 
     return (
         <div className="service-card">
-            <label for="task">{task}</label>
-            <input className="service-checkbox" id={task} type="checkbox"/>
-                <p>{description}</p>
-                <p>${price}</p>
+            <h3 className="mowing">{task}</h3>
+            <img className="mowing-image" src="https://img.huffingtonpost.com/asset/5cd362652100005800d38656.jpeg?ops=1200_630" alt="logo"/>
         </div>
     )
 }

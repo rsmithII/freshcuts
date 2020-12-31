@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import Services from './Services'
 import Deal from './Deal'
+import About from '../Pages/About'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const serviceURL = 'http://localhost:3000/services'
 const dealURL = 'http://localhost:3000/deals'
@@ -75,13 +78,14 @@ class CutsPage extends Component {
                     <a href="http://localhost:3001/contact">Contact</a>
                     <a href="http://localhost:3001/photos">Photos</a>
                     <a href="http://localhost:3001/login">Login</a>
-                    <a href="http://localhost:3001/signup">Sign Up</a>
+                    <a href="http://localhost:3001/signup">Request Service</a>
                     <a href="http://localhost:3001/login">Log Out</a>
                 </div>
-                 <header className="header">Fresh Cuts!</header>
+                <Header />
                 <Deal deals={this.state.deals} addService={this.addService}/>
-                <h3>Available Services</h3>
+                <About />
                 <Services services={this.state.services} addService={this.addService}/>
+                <Footer />
             </div>
         );
     }
